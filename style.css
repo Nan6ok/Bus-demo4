@@ -1,0 +1,31 @@
+:root{
+  --accent:#d32f2f;
+  --muted:#666;
+  --bg:#f6f7fb;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: "Noto Sans TC", Arial, sans-serif;background:var(--bg)}
+header{
+  display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--accent);color:#fff;
+}
+.title h1{margin:0;font-size:18px}
+.controls{display:flex;gap:8px;align-items:center}
+.controls select, .controls button{padding:6px 8px;border-radius:6px;border:0}
+.controls select{min-width:140px}
+.clock{font-weight:600;font-size:14px}
+
+.container{display:flex;height:calc(100vh - 84px)}
+.sidebar{width:320px;background:#fff;border-right:1px solid #e6e6e6;padding:12px;overflow:auto}
+.sidebar h2{margin-top:0}
+#stopList{list-style:none;padding:0;margin:0}
+#stopList li{display:flex;justify-content:space-between;padding:8px 6px;border-bottom:1px solid #f0f0f0}
+#stopList li .stop-name{color:#222}
+#stopList li .eta{color:var(--accent);font-weight:700}
+
+#main{flex:1}
+#map{height:100%;width:100%}
+
+footer{padding:8px 12px;font-size:12px;color:var(--muted);background:#fff;border-top:1px solid #eee}
+.bus-icon { font-size:18px; line-height:24px; text-align:center; width:28px; height:28px; }
+.estimated { opacity:0.75; filter:grayscale(30%); } /* estimated markers slightly different */
