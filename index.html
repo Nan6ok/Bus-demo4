@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bus Demo 4 — 香港即時巴士 / Multi-operator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>🚌 香港公共交通即時地圖</h1>
+      <div id="clock" class="clock"></div>
+    </div>
+    <div class="controls">
+      <select id="companySelect" title="Select operator">
+        <option value="kmb">九巴 (KMB)</option>
+        <option value="ctb">城巴 (CTB)</option>
+        <option value="nwfb">新巴 (NWFB)</option>
+        <option value="gmb">專線/小巴 (GMB)</option>
+        <option value="lrt">輕鐵 (LRT)</option>
+      </select>
+
+      <select id="routeSelect" title="Select route"><option>載入中...</option></select>
+      <button id="dirBtn">切換方向</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h2>站點（中 / EN）</h2>
+      <ul id="stopList"></ul>
+    </aside>
+
+    <main id="main">
+      <div id="map"></div>
+    </main>
+  </div>
+
+  <footer>
+    <small>資料來源：Data.gov.hk / etabus / rt.data.gov.hk。真實 GPS 由各公司提供；若無 GPS，則以 ETA+路線做估算（標示為「估算位置」）。</small>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
